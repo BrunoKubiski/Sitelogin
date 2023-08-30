@@ -28,6 +28,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="back-end/script.js"></script>
 </body>
 </html>
