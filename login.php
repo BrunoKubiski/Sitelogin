@@ -1,5 +1,5 @@
 <?php
-require_once "conexao2.php"; // Inclui o arquivo de conexão
+require_once "conexao.php"; // Inclui o arquivo de conexão
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = addslashes($_POST["email"]);
