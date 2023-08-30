@@ -1,0 +1,139 @@
+body {
+    font-family: montserrat, monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('background-image.jpg'); /* Substitua 'background-image.jpg' pelo caminho da sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background-color: rgba(112, 112, 112, 0.8);
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+}
+
+.login-form {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+    animation: slideIn 0.5s ease;
+    padding: 30px; /* Adicionado padding para espaçamento interno */
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+    border-radius: 10px; /* Borda mais arredondada */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+.login-form label,
+.login-form input {
+    display: block;
+    margin-bottom: 10px;
+    width: 96%;
+}
+
+.login-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form button {
+    padding: 10px 20px;
+    background-color: #36afff; /* Azul */
+    border: none;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #00548b; /* Tom mais escuro de azul ao passar o mouse */
+}
+
+.clock-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.clock-center {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock-hour, .clock-minute, .clock-second {
+    position: absolute;
+    transform-origin: bottom center;
+    transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.8, 1);
+}
+
+.clock-hour {
+    width: 4px;
+    height: 40px;
+    background-color: #333;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.clock-minute {
+    width: 3px;
+    height: 60px;
+    background-color: #666;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+}
+
+.clock-second {
+    width: 2px;
+    height: 70px;
+    background-color: #f00;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    z-index: 2;
+}
+
+/* ... restante do código ... */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
